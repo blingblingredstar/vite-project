@@ -3,6 +3,7 @@ module.exports = {
   plugins: ['stylelint-prettier'],
   // 继承一系列规则集合
   extends: [
+    'stylelint-config-tailwindcss',
     // standard 规则集合
     'stylelint-config-standard',
     // standard 规则集合的 scss 版本
