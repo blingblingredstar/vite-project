@@ -4,6 +4,7 @@ import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from 'vite-plugin-stylelint';
 import svgr from 'vite-plugin-svgr';
 import path from 'path';
+import legacy from '@vitejs/plugin-legacy';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -33,7 +34,8 @@ export default defineConfig({
         }
       }
     }),
-    svgr()
+    svgr(),
+    legacy({ targets: ['IE >= 11, > 0.5%, not dead'] })
   ],
   resolve: {
     // 别名配置
